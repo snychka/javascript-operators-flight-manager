@@ -6,6 +6,8 @@ var util = require('../logic/util');
 
 describe('Test seats distribution', function() {
    it('should distribute the seats by passenger type and seat type', function() {
+      assert(passengers.distributeAllSeatsToAllPassengers, "Have you created and exported a `passengers.distributeAllSeatsToAllPassengers` function?");
+
       let distributedPassengers = passengers.distributeAllSeatsToAllPassengers(150, 1200, 13, 18, 200);
       assert.equal(150, passengers.distributeAllSeatsToAllPassengers(150, 1200, 13, 18, 200).vipPassengersWithBusinessSeats, "You must distribute 150 VIP passengers to business seats");
       assert.equal(0, passengers.distributeAllSeatsToAllPassengers(150, 1200, 13, 18, 200).vipPassengersWithEconomySeats, "You must distribute 0 VIP passengers to economy seats");
@@ -70,6 +72,9 @@ describe('Test seats distribution', function() {
 
 describe('Test total seats distribution', function() {
    it('should check the number of total distributed seats', function() {
+      assert(passengers.distributeAllSeatsToAllPassengers, "Have you created and exported a `passengers.distributeAllSeatsToAllPassengers` function?");
+      assert(util.calculateTotalDistributedPassengers, "Have you created and exported a `util.calculateTotalDistributedPassengers` function?");
+
       let distributedPassengers = passengers.distributeAllSeatsToAllPassengers(150, 1200, 13, 18, 200);
       let totalDistributedPassengers = util.calculateTotalDistributedPassengers(distributedPassengers);
       assert.equal(1350, totalDistributedPassengers, "You must distribute a total of 1350 passengers");
@@ -115,6 +120,8 @@ describe('Test total seats distribution', function() {
 
 describe('Test flight capacity', function() {
    it('should check the flight capacity', function() {
+      assert(passengers.checkFlightCapacity, "Have you created and exported a `passengers.checkFlightCapacity` function?");
+
       let passengersNumber = passengers.checkFlightCapacity(1000, [132, 57, 63, 91]);
       assert.equal(343, passengersNumber, "You must have 343 passengers");
       assert.throws(function () { passengers.checkFlightCapacity(100, [132, 57, 63, 91]) }, Error, "The capacity of the flight is exceeded");
