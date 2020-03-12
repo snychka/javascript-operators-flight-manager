@@ -18,7 +18,31 @@
     <input id="capacity" placeholder="Flights capacity?">
     <button type="submit" onclick="onCalculateNumberOfFlights()">Calculate needed flights</button>
     <p id="flights"></p>
- 
+
+    <b>
+    <p>Check the aircraft revision</p>
+    </b>
+    <input id="distanceLimit" placeholder="Distance limit?">
+    <input id="coveredDistance1" placeholder="Covered distance 1?">
+    <input id="coveredDistance2" placeholder="Covered distance 2?">
+    <input id="coveredDistance3" placeholder="Covered distance 3?">
+    <input id="coveredDistance4" placeholder="Covered distance 4?">
+    <input id="coveredDistance5" placeholder="Covered distance 5?">
+    <button id="checkAircraftRevision" type="submit" onclick="onCheckAircraftRevision()">Check aircraft revision</button>
+    <p id="checkedAircraftRevision"></p>
+    
+    <b>
+    <p>Check the flight capacity</p>
+    </b>
+    <input id="flightCapacity" placeholder="Flight capacity?">
+    <input id="passengersFromFlight1" placeholder="Passengers from flight 1?">
+    <input id="passengersFromFlight2" placeholder="Passengers from flight 2?">
+    <input id="passengersFromFlight3" placeholder="Passengers from flight 3?">
+    <input id="passengersFromFlight4" placeholder="Passengers from flight 4?">
+    <input id="passengersFromFlight5" placeholder="Passengers from flight 5?">
+    <button id="checkFlightCapacity" type="submit" onclick="onCheckFlightCapacity()">Check flight capacity</button>
+    <p id="checkedFlightCapacity"></p>
+    
     <b>
     <p>Calculate the final price of a ticket starting from a base price and applying variations in percents</p>
     </b>
@@ -107,28 +131,5 @@
     <button id="calculateBonusPoints" type="submit" onclick="onCalculateBonusPoints()">Calculate bonus points</button>
     <p id="calculatedBonusPoints"></p>
 
-    <b>
-    <p>Check the flight capacity</p>
-    </b>
-    <input id="flightCapacity" placeholder="Flight capacity?">
-    <input id="passengersFromFlight1" placeholder="Passengers from flight 1?">
-    <input id="passengersFromFlight2" placeholder="Passengers from flight 2?">
-    <input id="passengersFromFlight3" placeholder="Passengers from flight 3?">
-    <input id="passengersFromFlight4" placeholder="Passengers from flight 4?">
-    <input id="passengersFromFlight5" placeholder="Passengers from flight 5?">
-    <button id="checkFlightCapacity" type="submit" onclick="onCheckFlightCapacity()">Check flight capacity</button>
-    <p id="checkedFlightCapacity"></p>
-
-    <b>
-    <p>Check the aircraft revision</p>
-    </b>
-    <input id="distanceLimit" placeholder="Distance limit?">
-    <input id="coveredDistance1" placeholder="Covered distance 1?">
-    <input id="coveredDistance2" placeholder="Covered distance 2?">
-    <input id="coveredDistance3" placeholder="Covered distance 3?">
-    <input id="coveredDistance4" placeholder="Covered distance 4?">
-    <input id="coveredDistance5" placeholder="Covered distance 5?">
-    <button id="checkAircraftRevision" type="submit" onclick="onCheckAircraftRevision()">Check aircraft revision</button>
-    <p id="checkedAircraftRevision"></p>
 </body>
 </html>
