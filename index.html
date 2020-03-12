@@ -42,6 +42,17 @@
     <input id="passengersFromFlight5" placeholder="Passengers from flight 5?">
     <button id="checkFlightCapacity" type="submit" onclick="onCheckFlightCapacity()">Check flight capacity</button>
     <p id="checkedFlightCapacity"></p>
+
+    <b>
+    <p>Distribute the seats by passenger type and seat type</p>
+    </b>
+    <input id="vipPassengers" placeholder="How many VIP passengers?">
+    <input id="regularPassengers" placeholder="How many regular passengers?">
+    <input id="nrOfFlights" placeholder="How many flights?">
+    <input id="businessSeatsPerFlight" placeholder="How many business seats per flight?">
+    <input id="economySeatsPerFlight" placeholder="How many economy seats per flight?">
+    <button id="distributePassengers" type="submit" onclick="onDistributePassengers()">Distribute passengers</button>
+    <p id="distributedPassengers"></p>
     
     <b>
     <p>Calculate the final price of a ticket starting from a base price and applying variations in percents</p>
@@ -76,16 +87,7 @@
     <button id='vipbusiness' type="submit" onclick="onCalculateTotalFinalPrice(this)">Calculate total final price</button>
     <p id="vipPassengersBusinessFlightTotalPrice"></p>
 
-    <b>
-    <p>Distribute the seats by passenger type and seat type</p>
-    </b>
-    <input id="vipPassengers" placeholder="How many VIP passengers?">
-    <input id="regularPassengers" placeholder="How many regular passengers?">
-    <input id="nrOfFlights" placeholder="How many flights?">
-    <input id="businessSeatsPerFlight" placeholder="How many business seats per flight?">
-    <input id="economySeatsPerFlight" placeholder="How many economy seats per flight?">
-    <button id="distributePassengers" type="submit" onclick="onDistributePassengers()">Distribute passengers</button>
-    <p id="distributedPassengers"></p>
+    
 
     <b>
     <p>Calculate the total number of passengers</p>
