@@ -1,5 +1,11 @@
 function Util() {
 
+  function checkInput(i) {
+    if (!i || isNaN(i)) {
+      throw Exception();
+    }
+  }
+
   function calculateTotalDistributedPassengers(
     {
       vipPassengersWithBusinessSeats, vipPassengersWithEconomySeats,
@@ -18,7 +24,7 @@ function Util() {
     return p.reduce((s,c) => s+c, 0);
   }
 
-  return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers};
+  return {checkInput, calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers};
 
 }
 
