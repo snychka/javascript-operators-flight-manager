@@ -1,5 +1,6 @@
 function Util() {
 
+
   function checkInput(i) {
     if (!i || isNaN(i)) {
       throw Exception();
@@ -24,7 +25,20 @@ function Util() {
     return p.reduce((s,c) => s+c, 0);
   }
 
-  return {checkInput, calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers};
+  function calculateTotalDistance(ds) {
+    let sum = 0;
+    ds.forEach(d => {if (d > 0) { sum += d;}});
+    return sum;
+  }
+
+  function calculateBonusPoints (bs, es, bp, ep) { 
+    let tb = calculateTotalDistance(bs);
+    let te = calculateTotalDistance(es);
+
+    return tb * bp/100.0 + te * ep/100.0;
+  }
+
+  return {checkInput, calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, calculateTotalDistance, calculateBonusPoints};
 
 }
 

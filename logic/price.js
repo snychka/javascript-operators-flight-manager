@@ -25,7 +25,11 @@ function Prices() {
     }
   }
 
-  return { calculateFinalPrice , calculateDefaultFinalPrice};
+  function calculateTotalFinalPrice(s, pt, ft, bp) {
+    return s * calculateDefaultFinalPrice(bp, pt, ft);
+  }
+
+  return { calculateTotalFinalPrice, calculateFinalPrice , calculateDefaultFinalPrice};
 
 
 }
